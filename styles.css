@@ -1,0 +1,82 @@
+
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    /* Додано шрифт Montserrat */
+    margin: 0;
+    padding: 0;
+    color: white;
+
+}
+
+header,
+main,
+footer {
+    padding: 20px;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    /* Збільшено minmax та змінено ширину */
+    grid-gap: 20px;
+    background-color: #8C7AB6;
+/* падінг вниз для контенту під таблицею результатів */
+    padding-bottom: 160px;
+  
+}
+
+/* Додано медіа-запит для мобільних пристроїв */
+@media (max-width: 600px) {
+    main {
+        grid-template-columns: 1fr;
+        /* Змінено колонки для мобільних пристроїв */
+    }
+}
+
+/* Додано медіа-запит для маленької висоти екрану */
+@media (max-height: 600px) {
+    main {
+        grid-template-rows: auto 1fr auto;
+        /* Додано автоматичну висоту для header та footer */
+    }
+}
+
+section {
+    border: 1px solid #ccc;
+    padding: 15px;
+}
+
+/* Додано стилі для таблиці */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+    /* Додано відступ від верху таблиці */
+}
+
+table,
+th,
+td {
+    border: 1px solid #ddd;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    position: fixed; 
+    bottom: 0;
+    width: 100%;
+}
